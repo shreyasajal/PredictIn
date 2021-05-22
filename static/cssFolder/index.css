@@ -1,0 +1,134 @@
+
+.proj_info_div{
+  margin:0;
+  padding:30px 70px;
+  background-image: linear-gradient(90deg, #d3bcee, #f2f2f2 , #d3bcee);   /*white-blue tint */
+}
+
+
+.tips_div{
+  /*display:none;*/
+  margin:0;
+  padding:30px 50px;
+  background-image: linear-gradient(0deg,#060d2a, #0098b3, #060d2a);  /*dark blue #060d2a*/  /*light blue #0098b3*/
+}
+.tips_div > div{
+  width:60%;
+  margin:0;
+  padding:17px;
+  border-radius:15px;
+  background-image: linear-gradient(90deg,  #f2f2f2 , #d3bcee); 
+}
+.tips_div>h2{
+  text-align:center;
+  color:#ffd735;
+  opacity:0;
+  transition:opacity 5s;
+}
+.tips_div h3{
+  color:#0d022a;
+} 
+#tipstext_left{ 
+  position:relative ; 
+  transition:left 3s;
+  left:30px;
+}
+#tipstext_right{ 
+  position:relative ;
+  transition:left 3s;
+  left:420px;
+  margin-top:15px;
+}
+ 
+ 
+.form_div {
+  border-radius: 40px;
+  border-top: 10px solid  #060d2a;
+  background-image: linear-gradient(90deg, #f2f2f2 , #d3bcee);  /*white-blue tint  #f2f2f2 */
+  padding: 20px 50px 20px 30px;
+  
+} 
+.form_div>h2 {
+  opacity:0;
+  transition:opacity 6s;
+} 
+
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.col-25 {
+  transform:rotateY(-60deg);
+  transition:transform 3s;
+  box-sizing: border-box;
+  float: left;
+  width: 25%;
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-top: 5px;
+}
+.col-75 {
+  transform:rotateY(-60deg);
+  transition:transform 3s;
+  box-sizing: border-box;
+  float: left;
+  width: 75%;
+  padding-left : 35px;
+  padding-right: 35px;
+  padding-top: 5px;
+}
+
+
+
+.required:after {
+  content:" *";
+  color: red;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 12px;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  float: middle;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+ 
+
+ 
+
+ 
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+} 
+
+
+
+ 
