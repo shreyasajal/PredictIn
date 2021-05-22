@@ -1,0 +1,162 @@
+body,html{
+  margin:0px;
+   
+  font-family: 'Roboto', sans-serif;
+}
+.all_center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+		/*header start*/
+.header_div{
+  height:400px;
+  width:100%;
+  background:url("../img/network2.jpg");
+  background-position: center;
+  background-repeat:  no-repeat;
+  background-size: cover;
+ 
+}
+#cna_logo{
+  height:50px;
+  width:55px;
+  position:absolute;
+   
+  top:10px;
+  right:20px;
+  border-radius:30%;
+  border:2.5px solid white;
+}
+#menubar{
+  margin:auto;
+  height:20px;
+  position:relative;
+  top:20px; 
+  display: flex;
+  align-items: center;
+  color:white;
+  font:20px bold;
+}
+#menubar span a{
+  color:white;
+  text-decoration:none;
+  font-family: 'Roboto', sans-serif;
+  
+}
+#menubar span a:hover{
+  color:#ffd735;
+}
+#headline_div{
+  height:60px; 
+  position:relative;
+  top:120px;
+  margin:auto;
+  text-align: center;
+  font-family: "Audiowide", sans-serif;
+}
+#headline_div_details{
+ 
+  position:relative;
+  top:120px;
+  margin:auto;
+  text-align:center;
+  color:white;
+
+}
+#headline_div h1{
+  display: inline-block;
+  vertical-align: middle;
+  padding:10px; 
+  color:white;
+    
+  border-radius:10px;
+} 
+		/*header end*/
+ 
+
+
+		/*main start*/
+		
+		
+		
+		
+		
+		
+		/*main end*/
+
+
+
+
+
+
+		/*start of footer*/
+footer{
+  height:90px;
+  width:100%;
+  margin:0px;
+  padding:0px;
+  color:white;
+  background-color: #060d2a; 
+}
+footer div p{
+  opacity:0;
+  transition:opacity 3s;
+  width:100%; 
+  height:100%; 
+  margin:0px;
+  padding:0px;     
+  display: flex;
+  align-items: center; 
+  justify-content: center;  
+  font-size:14px;
+} 
+
+.footer_left{
+   height:100%;
+   width:23%;
+   float:left;
+   display: inline-block;
+}
+.footer_mid{  
+  height:100%;
+  width:13%;  
+  display: inline-block;
+}
+.footer_right{  
+  height:100%; 
+  width:45%;
+  float:right;
+  display: inline-block;
+}
+.footer_social_media{
+  font-size:30px;
+  letter-spacing: 1.2px; 
+}
+ 
+.fafoot {
+  padding: 12px;
+  width: 30px;
+  height:25px;
+  margin: 0px 10px;
+  border-radius: 55%;
+  color:white; 
+  text-align: center;
+  text-decoration: none;
+   
+}
+.fafoot:hover {
+  color:#01000d;
+  background-color:white;
+} 
+		/*end of footer*/
+ 
+
+
+
+
+
+ 

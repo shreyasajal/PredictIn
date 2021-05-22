@@ -1,0 +1,76 @@
+ 
+ 
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+  
+
+.aboutus-section {
+  padding: 70px;
+  text-align: center;
+  color:white;
+  background-image: linear-gradient(30deg, #060d2a,#0098b3 ,#060d2a);  
+  font-size:20px;
+}
+
+.our_team_h2{
+  opacity:0;
+  transition:opacity 5s;
+  text-align:center ;
+  margin:0;
+  padding:20px;
+}
+
+.row{
+  margin:0;
+  padding:0 100px;
+   
+}
+.card_description::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 10px;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+  background-color:white;
+  border:1px solid grey;
+  border-radius:10px;
+  transform: rotateY(-60deg);
+  transition:transform 3s;
+}
+.card > img{
+  border-top-right-radius:10px;
+  border-top-left-radius:10px;
+}
+
+.card img{
+  height:230px;
+} 
+.card_description {
+  padding: 0 16px;
+}
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #030118;
+  text-align: center;
+  width: 100%;
+}
+ 
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}

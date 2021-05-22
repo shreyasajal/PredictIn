@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../static/cssFolder/common.css">
+    <link rel="stylesheet" type="text/css" href="../static/cssFolder/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <!-- google font -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>project</title>
+    
+     
+</head>
+
+
+
+
+<body> <!--  onLoad="window.scroll(0, 150)" inside body tag  -->
+	<header>
+	    <div class="header_div">
+	    	<div id="menubar"> 
+		    	<span>&nbsp <a href="{{ url_for('index') }}">Project</a> &nbsp</span>|
+		    	<span>&nbsp <a href="{{ url_for('aboutus') }}">About us</a> &nbsp</span>|
+		    	<span>&nbsp 
+			    	<a href="https://www.iitg.ac.in/stud/gymkhana/technical/home/CnAHome.html" target="_blank">
+			    	CNA Club
+			    	</a>
+		    	</span>
+	    	</div>
+	    	<img src="../static/img/cna.jpeg" alt="cna logo"  id="cna_logo">
+		<div id="headline_div">
+			<h1 style="color:#bd9841"> Predictin - Predict your post's reach on Linkedin </h1>
+		</div>
+		<div id="headline_div_details" >
+			<p style="color:#fff28e"> - A project by members of CNA Club, IIT Guwahati </p>
+		</div>
+	    </div>
+	</header>    
+    
+    
+    
+    
+ 	{% block resultdiv %}
+	{% endblock %}    
+    	<main style="box-sizing: border-box;background-color:#060d2a;margin:0px;padding:0px">
+    	
+    		<div class="proj_info_div">
+    			<h2 style="text-align:center">
+    				Info about this predictor 
+    			</h2> 
+    			<p>  ........todo........  </p>
+    			<p>  ........todo........  </p>
+    		</div>
+    		   	
+    		<div class="tips_div">
+    			<h2>  
+	    			<i class="fa fa-book fa-lg" aria-hidden="true"></i> 
+	    			&nbsp Some tips before you go for finding your post's reach 
+    			</h2><br>
+ 
+ 
+			<div id="tipstext_left">
+	    			<h3>   When you post, LinkedIn puts it in one of three buckets. </h3>
+	    			<ol>
+		    			<li>Spam</li>
+		    			<li>Low quality</li>
+		    			<li>High quality</li>
+	    			</ol>
+    			</div>
+    			
+    			<br> 
+    			
+    			<div id="tipstext_right">
+	    			<h3><strong>So what separates Linkedin identifying your content as spam, low quality, or high quality? </strong></h3>
+	    			<p>Getting around the spam filter is easy...</p>
+	    			<ul>
+		    			<li>Use good grammar</li>
+		    			<li>Don't use multiple links</li>
+		    			<li>Don't tag more than 5 people</li>
+		    			<li>Don't post more than every 3 hours</li>
+		    			<li>Don't use hashtags like "follow," "comment," or "like."</li>
+	    			</ul>
+	    			
+	    			<p>Now here's some things to keep in mind...</p>
+	    			<ul>
+		    			<li>Only tag people if you know they will respond</li>
+		    			<li>Use around 3 hashtags, one should be more broad, the next a little more niche, and the last very niche </li>
+		    			<li>(example for above point: "#socialmedia," "#b2bsocialmedia")</li>
+		    			<li>Format your post so it's easy to read</li>
+		    			<li>Go niche vs broad on your topics</li>
+		    			<li>Post things that encourage a response (easy way to do this is by asking a question)</li>
+		    			<li>Don't use outbound links (put them in comments)</li>
+		    			<li>Use strong keywords</li>
+	    			</ul>
+    			</div>
+    		</div>
+    	
+    	
+    	
+		<div class="form_div">
+			<h2 style="text-align:center"> Predict your reach here </h2>
+			<form action="{{ url_for('result') }}" method="post" onSubmit="return validate_blank(this)">
+				 
+				
+				<div class="row">
+					<div class="col-25">
+						<label for="country">Country</label>
+					</div>
+					<div class="col-75">
+						<select id="country" name="country"> 
+							<option value="Albania">Albania</option>
+							<option value="Algeria">Algeria</option> 
+							<option value="Argentina">Argentina</option> 
+							<option value="Australia">Australia</option>
+							<option value="Austria">Austria</option>
+							<option value="Azerbaijan">Azerbaijan</option> 
+							<option value="Bangladesh">Bangladesh</option> 
+							<option value="Belgium">Belgium</option> 
+							<option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>  
+							<option value="Brazil">Brazil</option> 
+							<option value="Bulgaria">Bulgaria</option> 
+							<option value="Canada">Canada</option> 
+							<option value="Chile">Chile</option>
+							<option value="China">China</option> 
+							<option value="Czech Republic">Czech Republic</option>
+							<option value="Denmark">Denmark</option> 
+							<option value="Egypt">Egypt</option> 
+							<option value="Finland">Finland</option>
+							<option value="France">France</option> 
+							<option value="Germany">Germany</option> 
+							<option value="Hungary">Hungary</option>
+							<option value="Iceland">Iceland</option>
+							<option value="India">India</option>
+							<option value="Indonesia">Indonesia</option>
+							<option value="Iran ">Iran </option>
+							<option value="Iraq">Iraq</option>
+							<option value="Ireland">Ireland</option> 
+							<option value="Israel">Israel</option>
+							<option value="Italy">Italy</option> 
+							<option value="Japan">Japan</option> 
+							<option value="Jordan">Jordan</option>
+							<option value="Kazakhstan">Kazakhstan</option>
+							<option value="Kenya">Kenya</option> 
+							<option value="Kuwait">Kuwait</option>
+							<option value="Kyrgyzstan">Kyrgyzstan</option> 
+							<option value="Lithuania">Lithuania</option>
+							<option value="Luxembourg">Luxembourg</option> 
+							<option value="Malaysia">Malaysia</option>
+							<option value="Maldives">Maldives</option> 
+							<option value="Mexico">Mexico</option> 
+							<option value="Netherlands">Netherlands</option> 
+							<option value="New Zealand">New Zealand</option> 
+							<option value="Norway">Norway</option>
+							<option value="Oman">Oman</option> 
+							<option value="Palau">Palau</option>			 
+							<option value="Poland">Poland</option>
+							<option value="Portugal">Portugal</option> 
+							<option value="Qatar">Qatar</option> 
+							<option value="Russian Federation">Russian Federation</option>
+							<option value="Rwanda">Rwanda</option> 
+							<option value="Saudi Arabia">Saudi Arabia</option> 
+							<option value="Singapore">Singapore</option> 
+							<option value="Spain">Spain</option>
+							<option value="Sri Lanka">Sri Lanka</option> 
+							<option value="Sweden">Sweden</option>
+							<option value="Switzerland">Switzerland</option>
+							<option value="Thailand">Thailand</option> 
+							<option value="Turkey">Turkey</option>
+							<option value="Turkmenistan">Turkmenistan</option> 
+							<option value="United Arab Emirates">United Arab Emirates</option>
+							<option value="United Kingdom">United Kingdom</option>
+							<option value="United States">United States</option> 
+							<option value="Uzbekistan">Uzbekistan</option>
+							<option value="north africa">North African Region</option>	 
+							<option value="south africaan region">south africaan region</option>
+							<option value="latin america">latin america</option>
+							<option value="europe">European region</option>
+							<option value="asia">Asian region</option>					
+						</select>
+					</div>
+				</div>				
+				
+				<div class="row">
+					<div class="col-25">
+						<label for="accType"  >Linkedin account type</label>
+					</div>
+					<div class="col-75">
+						<select id="accType" name="accType" required>
+							<option value="company">Company</option>
+							<option value="personal">Personal</option>
+						</select>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-25">
+						<label for="headline" >Your Post's Headline</label>
+					</div>
+					<div class="col-75">
+						<input type="text" id="headline" name="headline" placeholder="Your Headline.."  >
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-25">
+						<label for="bio">bio</label>
+					</div>
+					<div class="col-75">
+						<input type="text" id="bio" name="bio" placeholder="Your bio"  >
+					</div>
+				</div>											
+				
+				<div class="row">
+					<div class="col-25">
+						<label for="followers" class="required">Followers</label>
+					</div>
+					<div class="col-75">
+						<input type="text" id="followers" name="followers" placeholder="Your total followers" required>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-25">
+						<label for="profile_link" class="required">Profile link</label>
+					</div>
+					<div class="col-75">
+						<input type="text" id="profile_link" name="profile_link" placeholder="Your profile link" required>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-25">
+						<label for="mediaType" class="required">Your posts media type</label>
+					</div>
+					<div class="col-75">
+						<select id="mediaType" name="mediaType" required>
+							<option value="video">Video</option>
+							<option value="image">Image</option>
+							<option value="article">Article</option>
+							<option value="poll">Poll</option>
+							<option value="text">Text</option>
+							<option value="document">Document</option>
+						</select>
+					</div>
+				</div>	
+		 			
+				<div class="row">
+					<div class="col-25">
+						<label for="post_content" class="required">Content of your post</label>
+					</div>
+					<div class="col-75">
+						<textarea id="post_content" name="post_content" placeholder="Write your post content.." style="height:200px" required></textarea>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-25">
+						<label for="num_links" class="required">Number of links in your post</label>
+					</div>
+					<div class="col-75">
+						<input type="text" id="num_links" name="num_links" placeholder="number of links in your post" required>
+					</div>
+				</div>
+				
+				<div class="row all_center" style="padding:15px 0px">
+					<input type="submit" value="Predict Your Reach">
+				</div>
+			
+			</form>
+		</div>			<!-- !!! END OF FORM DIV-->
+		
+ 
+		
+		
+    	</main>
+    
+    
+	<footer>
+	    <div class="footer_left">
+	    		 <p>Created and hosted using  <br>Css,Html,JavaScript <br>& Flask </p>
+	    </div>
+	    <div class="footer_mid">
+	    		 <p style="color:#ffd735">  &#169 CNA Club  </p>
+	    </div>
+	    <div class="footer_right">
+	    	<p class="p_align footer_social_media">
+		    	<a href="https://www.facebook.com/caciitg" class="fafoot fa fa-facebook" target="_blank"></a>
+			<a href="https://www.linkedin.com/company/caciitg" class="fafoot fa fa-linkedin" target="_blank"></a>
+		    	<a href="https://github.com/samanghous/Predictin-deployment" class="fafoot fa fa-github" target="_blank"></a>   
+		</p>
+	    </div>
+	</footer> 
+	
+	
+	<script>
+    	$(document).scroll(function() {
+	       if($(window).scrollTop()+$(window).height() > $(".tips_div").offset().top){
+			$("#tipstext_left").css("left","0px");
+			$("#tipstext_right").css("left","450px");
+	       }else if($(window).scrollTop()+$(window).height() < $(".tips_div").offset().top ){
+			$("#tipstext_left").css("left","30px");
+			$("#tipstext_right").css("left","420px");	 
+	       }
+	       if($(window).scrollTop()+$(window).height() > $(".tips_div").offset().top){
+			$(".tips_div>h2").css("opacity","1");
+			 
+	       }else if($(window).scrollTop()+$(window).height() < $(".tips_div").offset().top ){
+			$(".tips_div>h2").css("opacity","0"); 
+	       }
+	       
+	       
+	       
+	       
+	       if($(window).scrollTop()+$(window).height() > $(".form_div").offset().top){
+			$(".form_div>h2").css("opacity","1");
+			 
+	       }else if($(window).scrollTop()+$(window).height() < $(".form_div").offset().top ){
+			$(".form_div>h2").css("opacity","0"); 
+	       }
+	       if($(window).scrollTop()+$(window).height() > $(".form_div").offset().top){
+			$(".col-25 ").css("transform","rotateY(0deg)");
+			 
+	       }else if($(window).scrollTop()+$(window).height() < $(".form_div").offset().top ){
+			$(".col-25 ").css("transform","rotateY(-60deg)"); 
+	       }
+	       if($(window).scrollTop()+$(window).height() > $(".form_div").offset().top){
+			$(".col-75 ").css("transform","rotateY(0deg)");
+			 
+	       }else if($(window).scrollTop()+$(window).height() < $(".form_div").offset().top ){
+			$(".col-75 ").css("transform","rotateY(-60deg)"); 
+	       }
+	       
+	       
+	  
+	       if($(window).scrollTop()+$(window).height() > $("footer").offset().top){
+			$("footer p").css("opacity","1");
+			 
+	       }else if($(window).scrollTop()+$(window).height() < $("footer").offset().top ){
+			$("footer p").css("opacity","0"); 
+	       }
+	 
+	        
+    	});
+    </script>
+    
+ 
+</body>
+</html>
